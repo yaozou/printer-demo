@@ -58,7 +58,7 @@ public class AcceptanceFormPrinter extends BasePrinter {
                 g2.setFont(font);
                 g2.drawString("日期:"+dto.getDate(), (float) 10, start += 15);
                 if (dto.getReturnOrderNums() > 0){
-                    g2.drawString("回单:"+dto.getReturnOrderNums()+"份", (float) 80, start);
+                    g2.drawString("回单:"+dto.getReturnOrderNums()+"份", (float) 100, start);
                 }
 
                g2.drawLine(10,(int)(start+=15),10+rowWidth,(int)start);
@@ -67,7 +67,6 @@ public class AcceptanceFormPrinter extends BasePrinter {
                     font = new Font("新宋体", Font.PLAIN, 14);
                     g2.setFont(font);
                     g2.drawString("卡号:"+dto.getCardNo(), (float) 10, start += 15);
-                    g2.drawString("", 0, start += 15);
                 }
 
                 font = new Font("新宋体", Font.PLAIN, 10);
