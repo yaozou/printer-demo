@@ -21,6 +21,11 @@ public class AcceptanceFormDto {
     private String endStation;
     private String date;
 
+    //卡号
+    private String cardNo;
+    //回单份数
+    private int    returnOrderNums;
+
     private String shipper;
     private String shipperPhone;
 
