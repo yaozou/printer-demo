@@ -61,7 +61,7 @@ public class ReturnOrderPrinter extends BasePrinter{
                 g2.drawString("托运人："+dto.getShipperName()+" "+dto.getShipperPhone(), (float) 10, start+=20);
                 g2.drawString("收货人："+dto.getConsigneeName()+" "+dto.getConsigneePhone(), (float) 10, start+=15);
                 g2.drawString("运单号："+dto.getQrCode(), (float) 10, start+=15);
-                g2.drawString("运单日期："+DateUtils.dateToStr(dto.getShipDate()), (float) 10, start+=15);
+                g2.drawString("运单日期："+dto.getShipDate(), (float) 10, start+=15);
 
                 /**
                  * 参数2：打印的x坐标起点         参数3  打印的y坐标起点

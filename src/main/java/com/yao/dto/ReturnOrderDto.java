@@ -17,13 +17,13 @@ public class ReturnOrderDto {
     private String shipperPhone; //托运人电话
     private String consigneeName; //收货人
     private String consigneePhone; //收货人电话
-    private Date   shipDate; // 托运日期
+    private String   shipDate; // 托运日期
 
     public ReturnOrderDto(String title,String department,String area,
                           String qrCodePath,String qrCode,
                           String shipperName,String shipperPhone,
                           String consigneeName,String consigneePhone,
-                          Date   shipDate){
+                          String   shipDate){
         this.title = title;
         this.department = department;
         this.area = area;

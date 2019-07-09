@@ -65,7 +65,7 @@ public class Demo {
                 "D:\\test.png","2999-0000-481*1*1",
                 "勾承儒","13981861802",
                 "徐建琼","18782200102",
-                new Date()
+                DateUtils.dateToStr(new Date())
         ));
         System.out.println("总共需打印"+(dtos.size())+"次");
         return dtos;
