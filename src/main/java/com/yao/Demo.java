@@ -171,7 +171,10 @@ public class Demo {
         dto.setReceiveUserName("胡XXX");
         dto.setReceiveUserPhone("13194998564222");
         dto.setAddress("四川省遂宁市船山区河东新区万达广场斜对面的卡卡头");
-        dto.setGoodsType("灯具 纸箱");
+        List<String> goodsTypes = new ArrayList<>();
+        goodsTypes.add("灯具 纸箱");
+        goodsTypes.add("灯具 木箱");
+        dto.setGoodsType(goodsTypes);
         dto.setNums(1);
         dto.setFreight("提付5.0");
 
