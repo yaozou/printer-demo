@@ -62,7 +62,7 @@ public class BaseInventoryListInfo {
 
     public BaseInventoryListInfo(String brandName,
                                  String userName,String userPhone,
-                                 String serialNo,String goodsType,int nums,String unit){
+                                 String serialNo,String goodsType,double nums,String unit){
         this.brandName = brandName;
 
         this.userName = userName;
@@ -75,7 +75,7 @@ public class BaseInventoryListInfo {
         this.unit = unit;
     }
 
-    public BaseInventoryListInfo(String endStation,int ticketNums,int nums,BigDecimal freight){
+    public BaseInventoryListInfo(String endStation,int ticketNums,double nums,BigDecimal freight){
         this.endStation = endStation;
         this.ticketNums = ticketNums;
         this.nums = nums;
