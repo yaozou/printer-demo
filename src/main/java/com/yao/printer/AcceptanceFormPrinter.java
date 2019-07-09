@@ -76,6 +76,7 @@ public class AcceptanceFormPrinter extends BasePrinter {
                 g2.drawString("电话:"+dto.getShipperPhone(), (float) 10, start += 15);
                 g2.drawString("收货人:"+dto.getReceiveUserName(), (float) 10, start += 15);
                 g2.drawString("电话:"+dto.getReceiveUserPhone(), (float) 10, start += 15);
+                g2.drawString("地址:"+dto.getAddress(), (float) 10, start += 15);
 
                 /**
                  * 参数2：打印的x坐标起点         参数3  打印的y坐标起点
