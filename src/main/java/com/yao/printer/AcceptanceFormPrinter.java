@@ -106,11 +106,15 @@ public class AcceptanceFormPrinter extends BasePrinter {
                 font = new Font("新宋体", Font.PLAIN, 10);
                 g2.setFont(font);
                 g2.drawLine(10,(int)(start+=10),10+rowWidth,(int)start);
-                // 1--提付 2--已付
+                // 1--提付 2--已付 3--月结 4--代扣
                 int freightType = dto.getFreightType();
                 String freightTypeName = "提付";
                 if (freightType == 2){
                     freightTypeName = "已付";
+                }else if (freightType == 3){
+                    freightTypeName = "月结";
+                }else if(freightType == 4){
+                    freightTypeName = "代扣";
                 }
                 g2.drawString(freightTypeName+":￥"+dto.getFreight(), (float) 10, start+=20);
                 g2.drawLine(10,(int)(start+=10),10+rowWidth,(int)start);
@@ -119,7 +123,7 @@ public class AcceptanceFormPrinter extends BasePrinter {
 
                 int startx = 10;
                 g2.drawString("总运费:"+dto.getTotalFreight(), (float) startx, start+=12);
-                if (freightType == 2){
+                if (dto.getActualPayment() != null){
                     startx += 50;
                     g2.drawString("实付款:"+dto.getActualPayment(), (float) startx, start);
                 }
