@@ -219,7 +219,7 @@ public class AcceptanceFormPrinter extends BasePrinter {
                             case 1:
                                 msg = dto.getList().get(i-1).getPackageType();break;
                             case 2:
-                                int nums = dto.getList().get(i-1).getNums();
+                                double nums = dto.getList().get(i-1).getNums();
                                 msg = nums+"";
                                 totalNums += nums;
                                 break;

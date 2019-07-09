@@ -26,7 +26,7 @@ public class BaseInventoryListInfo {
     // 品牌
     private String brandName;
     // 个数
-    private int nums;
+    private double nums;
     // 单位 （件）
     private String unit;
     //票数
