@@ -75,6 +75,7 @@ public class AcceptanceFormPrinter extends BasePrinter {
                 g2.drawString("电话:"+dto.getShipperPhone(), (float) 10, start += 15);
                 g2.drawString("收货人:"+dto.getReceiveUserName(), (float) 10, start += 15);
                 g2.drawString("电话:"+dto.getReceiveUserPhone(), (float) 10, start += 15);
+                g2.drawString("地址:"+dto.getAddress(), (float) 10, start += 15);
 
                 /**
                  * 参数2：打印的x坐标起点         参数3  打印的y坐标起点
@@ -104,11 +105,15 @@ public class AcceptanceFormPrinter extends BasePrinter {
                 font = new Font("新宋体", Font.PLAIN, 10);
                 g2.setFont(font);
                 g2.drawLine(10,(int)(start+=10),10+rowWidth,(int)start);
-                // 1--提付 2--已付
+                // 1--提付 2--已付 3--月结 4--代扣
                 int freightType = dto.getFreightType();
                 String freightTypeName = "提付";
                 if (freightType == 2){
                     freightTypeName = "已付";
+                }else if (freightType == 3){
+                    freightTypeName = "月结";
+                }else if(freightType == 4){
+                    freightTypeName = "代扣";
                 }
                 g2.drawString(freightTypeName+":￥"+dto.getFreight(), (float) 10, start+=20);
                 g2.drawLine(10,(int)(start+=10),10+rowWidth,(int)start);
@@ -117,7 +122,7 @@ public class AcceptanceFormPrinter extends BasePrinter {
 
                 int startx = 10;
                 g2.drawString("总运费:"+dto.getTotalFreight(), (float) startx, start+=12);
-                if (freightType == 2){
+                if (dto.getActualPayment() != null){
                     startx += 50;
                     g2.drawString("实付款:"+dto.getActualPayment(), (float) startx, start);
                 }

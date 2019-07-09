@@ -42,7 +42,7 @@ public class AcceptanceFormDto {
 
     //运费
     private String freight;
-    // 1--提付 2--已付
+    // 1--提付 2--已付 3--月结 4--代扣
     private int freightType;
 
     //代收款

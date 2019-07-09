@@ -68,7 +68,7 @@ public class Demo {
                 "D:\\test.png","2999-0000-481*1*1",
                 "勾承儒","13981861802",
                 "徐建琼","18782200102",
-                new Date()
+                DateUtils.dateToStr(new Date())
         ));
         System.out.println("总共需打印"+(dtos.size())+"次");
         return dtos;
@@ -174,7 +174,10 @@ public class Demo {
         dto.setReceiveUserName("胡XXX");
         dto.setReceiveUserPhone("13194998564222");
         dto.setAddress("四川省遂宁市船山区河东新区万达广场斜对面的卡卡头");
-        dto.setGoodsType("灯具 纸箱");
+        List<String> goodsTypes = new ArrayList<>();
+        goodsTypes.add("灯具 纸箱");
+        goodsTypes.add("灯具 木箱");
+        dto.setGoodsType(goodsTypes);
         dto.setNums(1);
         dto.setFreight("提付5.0");
 

@@ -1,5 +1,7 @@
 package com.yao.dto;
 
+import java.util.List;
+
 import lombok.Data;
 
 /**
@@ -24,7 +26,7 @@ public class SignReceiptDto {
     private String receiveUserPhone;
     private String address;
 
-    private String goodsType;
+    private List<String> goodsType;
     private int nums;
 
     //运费
