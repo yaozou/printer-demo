@@ -75,14 +75,15 @@ public class AcceptanceFormPrinter extends BasePrinter {
                 g2.drawString("电话:"+dto.getShipperPhone(), (float) 10, start += 15);
                 g2.drawString("收货人:"+dto.getReceiveUserName(), (float) 10, start += 15);
                 g2.drawString("电话:"+dto.getReceiveUserPhone(), (float) 10, start += 15);
-                g2.drawString("地址:"+dto.getAddress(), (float) 10, start += 15);
+                g2.drawString("地址:", (float) 10, start += 15);
+                int n = DrawUtils.drawStringLn(g2,dto.getAddress(),45,(int)start,120);
 
                 /**
                  * 参数2：打印的x坐标起点         参数3  打印的y坐标起点
                  * 参数4：打印图片的宽度           参数5：打印图片的高度
                  */
                 img_width = 20;
-                img_height = (start += 10);
+                img_height = (start += n*10);
                 //获取需要打印的图片，若是动态生成，直接传入绝对路径即可
                 Image src = Toolkit.getDefaultToolkit().getImage(dto.getBarCodePath());
                 if (src == null) {
