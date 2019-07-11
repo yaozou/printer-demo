@@ -2,6 +2,7 @@ package com.yao.printer;
 
 import com.yao.dto.BaseInventoryListInfo;
 import com.yao.dto.InventoryListDto;
+import com.yao.utils.DrawUtils;
 
 import java.awt.*;
 import java.awt.print.PageFormat;
@@ -49,9 +50,10 @@ public class InventoryListOfUnarrivedGoodsPrinter extends BasePrinter {
                 font = new Font("新宋体", Font.PLAIN, 12);
                 g2.drawString("", (float) 10, start += 10);
                 g2.setFont(font);
+                int n = 1;
                 for (int i =0;i<dto.getList().size();i++){
                     BaseInventoryListInfo info = dto.getList().get(i);
-                    g2.drawString((i+1)+"、"+info.getArea()+" "+info.getOrderNo(), (float) 15, start += 16);
+                    n = DrawUtils.drawStringLn(g2,(i+1)+"、"+info.getArea()+" "+info.getOrderNo(), 15, (int)(start += n*16),160);
                 }
                 System.out.println("-----------------打印成功-------------------");
                 return PAGE_EXISTS;
