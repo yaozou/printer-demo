@@ -3,6 +3,7 @@ package com.yao.printer;
 import com.yao.dto.AcceptanceFormDto;
 import com.yao.utils.DateUtils;
 import com.yao.utils.DrawUtils;
+import com.yao.utils.ImageUtils;
 
 import java.awt.*;
 import java.awt.print.PageFormat;
@@ -85,7 +86,7 @@ public class AcceptanceFormPrinter extends BasePrinter {
                 img_width = 20;
                 img_height = (start += n*10);
                 //获取需要打印的图片，若是动态生成，直接传入绝对路径即可
-                Image src = Toolkit.getDefaultToolkit().getImage(dto.getBarCodePath());
+                Image src = Toolkit.getDefaultToolkit().getImage(ImageUtils.imageForURL(dto.getBarCodePath()));
                 if (src == null) {
                     System.out.println("没有找到图像");
                 }
@@ -135,7 +136,7 @@ public class AcceptanceFormPrinter extends BasePrinter {
 
                 img_height = (start += 20);
                 //获取需要打印的图片，若是动态生成，直接传入绝对路径即可
-                src = Toolkit.getDefaultToolkit().getImage(dto.getQrCodePath());
+                src = Toolkit.getDefaultToolkit().getImage(ImageUtils.imageForURL(dto.getQrCodePath()));
                 if (src == null) {
                     System.out.println("没有找到图像");
                 }

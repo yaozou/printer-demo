@@ -1,5 +1,7 @@
 package com.yao.test;
 
+import com.yao.utils.ImageUtils;
+
 import java.awt.*;
 import java.awt.print.*;
 import java.text.SimpleDateFormat;
@@ -59,7 +61,7 @@ public class DemoPrinter implements Printable {
                 g2.setStroke(new BasicStroke(0.5f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 2.0f, dash1, 0.0f));
 
                 //获取需要打印的图片，若是动态生成，直接传入绝对路径即可
-                Image src = Toolkit.getDefaultToolkit().getImage(DEMODTO_LIST.get(COUNT).getQrCodePath());
+                Image src = Toolkit.getDefaultToolkit().getImage(ImageUtils.imageForURL(DEMODTO_LIST.get(COUNT).getQrCodePath()));
                 if (src == null) {
                     System.out.println("没有找到图像");
                 }

@@ -14,7 +14,7 @@ public class Demo {
         PrinterServer server = new PrinterServer();
         //server.externalStickersPrint(getExternalDemoDto());
         //回单
-        //server.returnOrderPrint(getReturnDemoDto());
+        server.returnOrderPrint(getReturnDemoDto());
         // 未到货清单
         //server.inventoryListOfUnarrivedGoodsPrint(getInventoryListOfUnarrivedGoodsDto());
         //货在途清单
@@ -36,10 +36,10 @@ public class Demo {
 
         // 受理单
         // 1--客户联，2---存根联   1--提付 2--已付
-        AcceptanceFormDto dto = getAcceptanceFormDto(1,1);
+        /*AcceptanceFormDto dto = getAcceptanceFormDto(1,1);
         dto.setCardNo("30000");
         dto.setReturnOrderNums(1);
-        server.acceptanceFormPrint(dto);
+        server.acceptanceFormPrint(dto);*/
         //server.acceptanceFormPrint(getAcceptanceFormDto(2,1));
 
         //server.acceptanceFormPrint(getAcceptanceFormDto(1,2));
@@ -49,14 +49,14 @@ public class Demo {
         List<ExternalStickersDto> dtos = new ArrayList<ExternalStickersDto>();
         dtos.add(new ExternalStickersDto("余氏东风物流",
                 "总部",
-                "D:\\test.png",
+                "http://62.234.108.98:9900/upload/barcodePic/20190520/0130132001000005714-1-1.png",
                 "2999-0000-481*1*1","新都区",
                 "徐建琼","新都区大丰镇悉尼湾"));
-        dtos.add(new ExternalStickersDto("余氏东风物流",
+        /*dtos.add(new ExternalStickersDto("余氏东风物流",
                 "江油市",
-                "D:\\test.png",
+                "http://62.234.108.98:9900/upload/barcodePic/20190520/0130132001000005714-1-1.png",
                 "2999-0000-481*1*1","河南镇州",
-                "王振兴",""));
+                "王振兴",""));*/
         System.out.println("总共需打印"+(dtos.size())+"次");
         return dtos;
     }
