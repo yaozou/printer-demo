@@ -12,9 +12,9 @@ import java.util.List;
 public class Demo {
     public static void main(String[] args) {
         PrinterServer server = new PrinterServer();
-        //server.externalStickersPrint(getExternalDemoDto());
+        server.externalStickersPrint(getExternalDemoDto());
         //回单
-        server.returnOrderPrint(getReturnDemoDto());
+        //server.returnOrderPrint(getReturnDemoDto());
         // 未到货清单
         //server.inventoryListOfUnarrivedGoodsPrint(getInventoryListOfUnarrivedGoodsDto());
         //货在途清单
@@ -54,7 +54,7 @@ public class Demo {
                 "徐建琼","新都区大丰镇悉尼湾"));
         /*dtos.add(new ExternalStickersDto("余氏东风物流",
                 "江油市",
-                "http://62.234.108.98:9900/upload/barcodePic/20190520/0130132001000005714-1-1.png",
+                "D:\\test.png",
                 "2999-0000-481*1*1","河南镇州",
                 "王振兴",""));*/
         System.out.println("总共需打印"+(dtos.size())+"次");

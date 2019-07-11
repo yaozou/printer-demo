@@ -101,7 +101,7 @@ public class SignReceiptPrinter extends BasePrinter {
                 img_width = 40;
                 img_height = (start += 30);
                 //获取需要打印的图片，若是动态生成，直接传入绝对路径即可
-                Image src = Toolkit.getDefaultToolkit().getImage(ImageUtils.imageForURL(dto.getBarCodePath()));
+                Image src = ImageUtils.imageForURL(dto.getBarCodePath());
                 if (src == null) {
                     System.out.println("没有找到图像");
                 }
@@ -110,7 +110,7 @@ public class SignReceiptPrinter extends BasePrinter {
 
                 img_height = (start += 50);
                 //获取需要打印的图片，若是动态生成，直接传入绝对路径即可
-                src = Toolkit.getDefaultToolkit().getImage(ImageUtils.imageForURL(dto.getQrCodePath()));
+                src = ImageUtils.imageForURL(dto.getQrCodePath());
                 if (src == null) {
                     System.out.println("没有找到图像");
                 }

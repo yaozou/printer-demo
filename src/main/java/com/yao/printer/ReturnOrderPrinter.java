@@ -41,7 +41,7 @@ public class ReturnOrderPrinter extends BasePrinter{
                 //1.线宽 2、3、不知道，4、空白的宽度，5、虚线的宽度，6、偏移量
                 g2.setStroke(new BasicStroke(0.5f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 2.0f, dash1, 0.0f));
                 //获取需要打印的图片，若是动态生成，直接传入绝对路径即可
-                Image src = Toolkit.getDefaultToolkit().getImage(ImageUtils.imageForURL(dto.getQrCodePath()));
+                Image src = ImageUtils.imageForURL(dto.getQrCodePath());
                 if (src == null) {
                     System.out.println("没有找到图像");
                 }
