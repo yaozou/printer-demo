@@ -125,14 +125,14 @@ public class AcceptanceFormPrinter extends BasePrinter {
                 int startx = 10;
                 g2.drawString("总运费:"+dto.getTotalFreight(), (float) startx, start+=12);
                 if (dto.getActualPayment() != null){
-                    startx += 50;
+                    startx += 80;
                     g2.drawString("实付款:"+dto.getActualPayment(), (float) startx, start);
                 }
-                startx += 50;
+                startx += 80;
                 g2.drawString("总费用:"+dto.getTotalFund(), (float) startx, start);
 
                 g2.drawString("承运人:"+dto.getDeliver(), (float) 10, start+=12);
-                g2.drawString("电话:"+dto.getDeliverPhone(), (float) 80, start);
+                g2.drawString("电话:"+dto.getDeliverPhone(), (float) 100, start);
 
                 img_height = (start += 20);
                 //获取需要打印的图片，若是动态生成，直接传入绝对路径即可
