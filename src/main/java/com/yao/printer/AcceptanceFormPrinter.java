@@ -120,6 +120,10 @@ public class AcceptanceFormPrinter extends BasePrinter {
                 g2.drawString(freightTypeName+":￥"+dto.getFreight(), (float) 10, start+=20);
                 g2.drawLine(10,(int)(start+=10),10+rowWidth,(int)start);
 
+                String collectFund = "0.00";
+                if(dto.getCollectingFund() != null){
+                    collectFund = dto.getCollectingFund().toString();
+                }
                 g2.drawString("代收款:"+dto.getCollectingFund(), (float) 10, start+=20);
 
                 int startx = 10;
