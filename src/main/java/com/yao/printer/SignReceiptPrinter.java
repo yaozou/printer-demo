@@ -85,7 +85,11 @@ public class SignReceiptPrinter extends BasePrinter {
 
                 font = new Font("新宋体", Font.PLAIN, 14);
                 g2.setFont(font);
-                g2.drawString("代收款:"+dto.getCollectingFund(), (float) 10, start+=20);
+                String collectFund = "0.00";
+                if(dto.getCollectingFund() != null){
+                    collectFund = dto.getCollectingFund();
+                }
+                g2.drawString("代收款:"+collectFund, (float) 10, start+=20);
                 g2.drawString("应收总额:"+dto.getTotalReceiveFund(), (float) 10, start+=20);
 
                 font = new Font("新宋体", Font.PLAIN, 12);

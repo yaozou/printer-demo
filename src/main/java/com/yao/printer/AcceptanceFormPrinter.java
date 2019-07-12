@@ -47,7 +47,7 @@ public class AcceptanceFormPrinter extends BasePrinter {
                 g2.setFont(font);
                 float start = 0;
                 //标题，固定不变
-                g2.drawString("余氏东风签收单", (float) 60, start += 16);
+                g2.drawString("余氏东风受理单", (float) 60, start += 16);
 
                 font = new Font("新宋体", Font.PLAIN, 10);
                 g2.setFont(font);
@@ -122,9 +122,9 @@ public class AcceptanceFormPrinter extends BasePrinter {
 
                 String collectFund = "0.00";
                 if(dto.getCollectingFund() != null){
-                    collectFund = dto.getCollectingFund().toString();
+                    collectFund = dto.getCollectingFund();
                 }
-                g2.drawString("代收款:"+dto.getCollectingFund(), (float) 10, start+=20);
+                g2.drawString("代收款:"+collectFund, (float) 10, start+=20);
 
                 int startx = 10;
                 g2.drawString("总运费:"+dto.getTotalFreight(), (float) startx, start+=12);
