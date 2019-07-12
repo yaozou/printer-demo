@@ -126,7 +126,7 @@ public class SignReceiptPrinter extends BasePrinter {
                 font = new Font("新宋体", Font.PLAIN, 12);
                 g2.setFont(font);
                 g2.drawString("查询地址:www.962508.cn", (float) 10, start+=20);
-                g2.drawString("打印时间:"+DateUtils.dateToStr(new Date()), (float) 10, start+=20);
+                g2.drawString("打印时间:"+DateUtils.dateTimeToStr(new Date()), (float) 10, start+=20);
                 g2.drawString("送货人:", (float) 10, start+=20);
 
                 font = new Font("新宋体", Font.PLAIN, 14);

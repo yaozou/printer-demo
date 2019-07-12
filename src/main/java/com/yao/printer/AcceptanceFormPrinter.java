@@ -178,7 +178,7 @@ public class AcceptanceFormPrinter extends BasePrinter {
                 g2.drawString("托运人(托运人的委托人签字)", (float) 10, start+=nums*20);
                 g2.drawLine(60,(int)(start+=15),180,(int)start);
 
-                g2.drawString("打印时间:"+ DateUtils.dateToStr(new Date()), (float) 10, start+=20);
+                g2.drawString("打印时间:"+ DateUtils.dateTimeToStr(new Date()), (float) 10, start+=20);
 
                 font = new Font("新宋体", Font.PLAIN, 12);
                 g2.setFont(font);
