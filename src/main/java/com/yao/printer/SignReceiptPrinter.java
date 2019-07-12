@@ -75,9 +75,9 @@ public class SignReceiptPrinter extends BasePrinter {
                 g2.setFont(font);
                 DrawUtils.drawStringLn(g2,dto.getAddress()+"",  10, (int) (start+=20),rowWidth);
                 if (dto.getGoodsType().size() > 0){
-                    g2.drawString("货物:"+dto.getGoodsType().get(0), (float) 10, start+=30);
+                    g2.drawString("货物:"+dto.getGoodsType().get(0), (float) 10, start+=25);
                     for (int i=1;i<dto.getGoodsType().size();i++){
-                        g2.drawString(dto.getGoodsType().get(i), 30, start+=30);
+                        g2.drawString(dto.getGoodsType().get(i), 30, start+=15);
                     }
                 }
                 g2.drawString("总件数:"+dto.getNums(), (float) 10, start+=20);
