@@ -47,6 +47,8 @@ public class BaseInventoryListInfo {
     //包装
     private String packageType;
 
+    //备注
+    private String desc = new String();
     public BaseInventoryListInfo(){}
 
     public BaseInventoryListInfo(String area,String orderNo){

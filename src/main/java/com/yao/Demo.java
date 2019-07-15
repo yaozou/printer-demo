@@ -12,7 +12,7 @@ import java.util.List;
 public class Demo {
     public static void main(String[] args) {
         PrinterServer server = new PrinterServer();
-        server.externalStickersPrint(getExternalDemoDto());
+        //server.externalStickersPrint(getExternalDemoDto());
         //回单
         //server.returnOrderPrint(getReturnDemoDto());
         // 未到货清单
@@ -44,6 +44,12 @@ public class Demo {
 
         //server.acceptanceFormPrint(getAcceptanceFormDto(1,2));
         //server.acceptanceFormPrint(getAcceptanceFormDto(2,2));
+
+        //未盘点货物清单
+        //server.printTableListPrint(getPrintTableListDto("未盘点货物清单"),0);
+
+        //回单清单
+        server.printTableListPrint(getPrintTableListDto1("回单清单"),2);
     }
     private static List<ExternalStickersDto> getExternalDemoDto() {
         List<ExternalStickersDto> dtos = new ArrayList<ExternalStickersDto>();
